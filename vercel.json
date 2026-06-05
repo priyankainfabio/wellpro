@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "buildCommand": null,
+  "outputDirectory": "docs",
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/about-us.html", "destination": "/about-us/", "permanent": true },
+    { "source": "/services.html", "destination": "/services/", "permanent": true },
+    { "source": "/contact-us.html", "destination": "/contact-us/", "permanent": true },
+    { "source": "/wellness-protocol-basis.html", "destination": "/wellness-protocol-basis/", "permanent": true },
+    { "source": "/diabetes-assist-program.html", "destination": "/diabetes-assist-program/", "permanent": true }
+  ]
+}

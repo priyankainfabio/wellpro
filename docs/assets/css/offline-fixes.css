@@ -10,9 +10,46 @@
   margin: 0 !important;
 }
 
-#container-widget-1672220211169,
-#container-widget-1680868718887 {
+#container-widget-1672220211169 {
   display: none !important;
+}
+
+.offline-pdf-section {
+  max-width: 1375px;
+  margin: 0 auto 56px;
+  padding: 0 24px;
+}
+
+.offline-pdf-download {
+  display: block;
+  text-align: right;
+  margin: 0 0 32px;
+  color: #111;
+  font-family: Poppins, arial, sans-serif;
+  font-size: 16px;
+}
+
+.offline-pdf-frame {
+  width: 100%;
+  height: 760px;
+  border: 0;
+  display: block;
+  background: #2f2f2f;
+}
+
+.offline-pdf-fallback {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .offline-pdf-section {
+    padding: 0 14px;
+    margin-bottom: 32px;
+  }
+
+  .offline-pdf-frame {
+    height: 620px;
+  }
 }
 
 .multiple-items:not(.slick-initialized) {

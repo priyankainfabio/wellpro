@@ -1,4 +1,8 @@
 
+if (!window.WebPlatform) {
+  window.WebPlatform = {};
+}
+
 if (!WebPlatform.onReady) {
   WebPlatform.documentReadyRequests = [];
   WebPlatform.onReady = function (request) {

@@ -1,0 +1,31 @@
+.offline-embed-placeholder {
+  display: none !important;
+}
+
+.widgetCode:has(.offline-embed-placeholder),
+.code-widget-content:has(.offline-embed-placeholder) {
+  min-height: 0 !important;
+  height: auto !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+#container-widget-1672220211169,
+#container-widget-1680868718887 {
+  display: none !important;
+}
+
+.multiple-items:not(.slick-initialized) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.multiple-items:not(.slick-initialized) .items2 {
+  margin: 10px !important;
+}
+
+.multiple-items .items2 img {
+  object-fit: contain;
+}

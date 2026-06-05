@@ -2,13 +2,20 @@ const fs = require("fs");
 const path = require("path");
 
 const root = path.resolve(__dirname, "docs");
-const pages = [
-  "/",
-  "/about-us/",
-  "/contact-us/",
-  "/wellness-protocol-basis/",
-  "/diabetes-assist-program/"
-];
+function findPages(dir, prefix = "") {
+  const pages = [];
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const entryPath = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      pages.push(...findPages(entryPath, `${prefix}/${entry.name}`));
+    } else if (entry.name === "index.html") {
+      pages.push(prefix ? `${prefix}/` : "/");
+    }
+  }
+  return pages;
+}
+
+const pages = findPages(root);
 const refs = new Set(pages);
 const externalLoadRefs = [];
 
